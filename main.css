@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Baloo 2", cursive;
+  line-height: 1.5;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  font-weight: normal;
+  font-size: inherit;
+}
+
+hr {
+  width: 50%;
+  margin: 2rem auto;
+  border: solid #cccccc;
+  border-width: 1px 0 0 0;
+}
+
+a,
+a:visited {
+  position: relative;
+  color: #116eee;
+  text-decoration: none;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  border-top: 0px solid transparent;
+  transform: skewX(-10deg);
+  transition: width 150ms ease-in-out, border 150ms ease-in-out;
+}
+
+a:hover::after,
+a:active::after,
+a:focus::after {
+  width: 100%;
+  border-top: 3px solid #116eee;
+}
+
+/* Layout */
+
+.brand {
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  padding: 0.5rem 1rem;
+  background-color: #116eee;
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+.flag {
+  position: fixed;
+  z-index: 3;
+  top: 21px;
+  right: -110px;
+  width: 300px;
+  padding: 0.5rem 0;
+  text-align: center;
+  transform: rotate(45deg);
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+  border: 1px solid #222222;
+  background-color: #333333;
+  color: #11ee92;
+}
+
+.teasing {
+  position: relative;
+  z-index: 1;
+  padding: 3rem 1rem 4rem 1rem;
+  background-color: #116eee;
+  color: #ffffff;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.teasing .highlight {
+  color: #11ee92;
+}
+
+.container {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.box {
+  padding: 1.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #dddddd;
+  background-color: #fafafa;
+  transition: transform 400ms ease-in-out, background-color 400ms ease-in-out, box-shadow 400ms ease-in-out;
+}
+
+.box:hover {
+  transform: translateY(-0.2rem);
+  background-color: #ffffff;
+  box-shadow: 0 0.5rem 2.5rem -2rem rgba(0, 0, 0, 0.8);
+}
+
+.box > p + p {
+  margin-top: 0.25rem;
+}
+
+/* Content */
+
+.title {
+  line-height: 1.25em;
+  font-size: 1.5rem;
+}
+
+.paragraph {
+  margin-bottom: 1.5rem;
+}
+
+.center {
+  text-align: center;
+}
+
+.font-size-bigger {
+  font-size: 1.25rem;
+}
+
+.highlight {
+  color: #116eee;
+}
+
+.layout {
+  display: flex;
+}
+
+.layout-left,
+.layout-right {
+  flex-basis: 50%;
+  padding: 0 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .layout {
+    display: block;
+  }
+  
+  .layout-right {
+    margin-top: 1.5rem;
+  }  
+}
+
+.tel {
+  display: inline-block;
+  margin: 1.5rem 0;
+  line-height: 1.25em;
+  font-size: 2rem;
+}
