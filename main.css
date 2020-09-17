@@ -96,8 +96,14 @@ a:focus::after {
   color: #11ee92;
 }
 
+@media (min-width: 820px) {
+  .teasing .breakpoint {
+    display: none;
+  }
+}
+
 .container {
-  max-width: 960px;
+  max-width: 640px;
   margin: 2rem auto;
   padding: 0 1rem;
 }
@@ -160,7 +166,7 @@ a:focus::after {
   
   .layout-right {
     margin-top: 1.5rem;
-  }  
+  }
 }
 
 .tel {
