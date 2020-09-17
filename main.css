@@ -96,8 +96,14 @@ a:focus::after {
   color: #11ee92;
 }
 
+@media (min-width: 520px) {
+  .teasing .visible-sm {
+    display: none;
+  }
+}
+
 @media (min-width: 820px) {
-  .teasing .breakpoint {
+  .teasing .visible-lg {
     display: none;
   }
 }
