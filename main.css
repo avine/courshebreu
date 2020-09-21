@@ -208,6 +208,12 @@ ul {
   }
 }
 
+@media (max-width: 519px) {
+  .visible-not-sm {
+    display: none;
+  }
+}
+
 @media (min-width: 840px) {
   .visible-lg {
     display: none;
