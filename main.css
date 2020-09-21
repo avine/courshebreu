@@ -190,6 +190,10 @@ hr {
   background-image: url(./images/desktop-solid.svg);
 }
 
+.box.question {
+  background-image: url(./images/lightbulb-solid.svg);
+}
+
 /* Content */
 
 .title {
@@ -213,6 +217,12 @@ hr {
 
 .highlight {
   color: #116eee;
+}
+
+.bullet::before {
+  content: "•";
+  color: #116eee;
+  padding-right: 0.25rem;
 }
 
 .tel {
