@@ -1,4 +1,4 @@
-/* Common */
+/* ---- Common ---- */
 
 * {
   box-sizing: border-box;
@@ -33,6 +33,12 @@ hr {
   border-width: 1px 0 0 0;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .link,
 .link:visited {
   position: relative;
@@ -58,11 +64,11 @@ hr {
   border-top: 3px solid #116eee;
 }
 
-/* Layout */
+/* ---- Layout ---- */
 
 .brand {
   position: sticky;
-  z-index: 2;
+  z-index: 3;
   top: 0;
   padding: 0.5rem 1rem;
   background-color: #116eee;
@@ -72,9 +78,9 @@ hr {
 
 .flag {
   position: fixed;
-  z-index: 3;
-  top: 21px;
-  right: -110px;
+  z-index: 4;
+  top: 20px;
+  right: -109px;
   width: 300px;
   padding: 0.5rem 0;
   text-align: center;
@@ -87,7 +93,7 @@ hr {
 
 .header {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   padding: 3rem 1rem 4rem 1rem;
   background-color: #116eee;
   color: #ffffff;
@@ -127,7 +133,6 @@ hr {
 
 .banner {
   position: relative;
-  z-index: 1;
   margin-top: 3rem;
   margin-bottom: 3rem;
   padding: 2rem;
@@ -165,7 +170,8 @@ hr {
   background-position: right top;
   background-origin: content-box;
   background-size: 3rem 3rem;
-  transition: transform 400ms ease-in-out, background-color 400ms ease-in-out, box-shadow 400ms ease-in-out;
+  transition: transform 400ms ease-in-out, background-color 400ms ease-in-out,
+    box-shadow 400ms ease-in-out;
 }
 
 .box:hover {
@@ -194,7 +200,19 @@ hr {
   background-image: url(./images/lightbulb-solid.svg);
 }
 
-/* Content */
+/* ---- Content ---- */
+
+@media (min-width: 520px) {
+  .visible-sm {
+    display: none;
+  }
+}
+
+@media (min-width: 840px) {
+  .visible-lg {
+    display: none;
+  }
+}
 
 .title {
   line-height: 1.25em;
@@ -219,8 +237,15 @@ hr {
   color: #116eee;
 }
 
-.bullet::before {
-  content: "•";
+.list-item {
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+.list-item::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
   color: #116eee;
   padding-right: 0.25rem;
 }
@@ -244,16 +269,20 @@ hr {
   border-radius: 50%;
   background: #116eee url(./images/phone-alt-solid.svg) center center no-repeat;
   background-size: 1.25rem 1.25rem;
+  animation: pulseAnim 2s infinite;
 }
 
-@media (min-width: 520px) {
-  .visible-sm {
-    display: none;
+@keyframes pulseAnim {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgb(17, 110, 238, 0.7);
   }
-}
-
-@media (min-width: 840px) {
-  .visible-lg {
-    display: none;
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgb(17, 110, 238, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgb(17, 110, 238, 0);
   }
 }
