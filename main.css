@@ -108,15 +108,14 @@ ul {
 .container {
   position: relative;
   z-index: 1;
-  max-width: 640px;
+  max-width: 720px;
   margin: 3rem auto;
   padding: 0 1rem;
 }
 
 .column-left,
 .column-right {
-  flex-basis: 50%;
-  padding: 0 1.5rem;
+  padding: 0 1rem;
 }
 
 @media (max-width: 640px) {
@@ -128,6 +127,7 @@ ul {
 @media (min-width: 641px) {
   .column {
     display: flex;
+    justify-content: space-around;
   }
 }
 
@@ -229,7 +229,11 @@ ul {
   text-align: center;
 }
 
-.font-size-bigger {
+.font-size-md {
+  font-size: 1.125rem;
+}
+
+.font-size-lg {
   font-size: 1.25rem;
 }
 
