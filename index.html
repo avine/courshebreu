@@ -18,7 +18,7 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css?v=3" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css?v=5" />
   </head>
   <body>
     <h2 class="brand">Oulpan Hebraica</h2>
@@ -104,7 +104,7 @@
       </section>
     </main>
 
-    <footer class="container center banner">
+    <footer id="contact" class="container center banner">
       <h3 class="title">
         Renseignements<br class="visible-sm" />
         et Inscriptions
@@ -198,5 +198,21 @@
         </div>
       </div>
     </aside>
+
+    <p class="container center">
+      <a href="#contact" id="contact-link" class="button">
+        Renseignements et Inscriptions
+      </a>
+    </p>
+    <script>
+      document
+        .getElementById("contact-link")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          document
+            .getElementById("contact")
+            .scrollIntoView({ behavior: "smooth", block: "center" });
+        });
+    </script>
   </body>
 </html>

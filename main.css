@@ -42,11 +42,21 @@ blockquote {
   margin: 0;
 }
 
+button {
+  outline: none;
+  padding: 0;
+  border: none;
+  background: none;
+  line-height: inherit;
+  font: inherit;
+}
+
 .link,
 .link:visited {
   position: relative;
   color: #116eee;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .link::after {
@@ -65,6 +75,23 @@ blockquote {
 .link:focus::after {
   width: 100%;
   border-top: 3px solid #116eee;
+}
+
+.button {
+  border-radius: 99px;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #116eee;
+  background-color: #116eee;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.button:hover {
+  background-color: #ffffff;
+  color: #116eee;
 }
 
 /* ---- Layout ---- */
