@@ -27,7 +27,6 @@ p {
 }
 
 hr {
-  width: 50%;
   margin: 2rem auto;
   border: solid #cccccc;
   border-width: 1px 0 0 0;
@@ -305,6 +304,17 @@ blockquote {
   }
 }
 
+.reviews-wrapper {
+  border-top: 1px solid rgba(17, 110, 238, 0.2);
+  background-image: 
+    linear-gradient(rgba(17, 110, 238, 0.05) 0%, rgba(17, 110, 238, 0) 100%),
+    linear-gradient(rgba(17, 110, 238, 0.05) 0rem, rgba(17, 110, 238, 0) 0.5rem);
+}
+
+.reviews-wrapper > .container {
+  margin-top: 1.5rem;
+}
+
 .reviews {
   display: flex;
   flex-wrap: wrap;
@@ -329,13 +339,13 @@ blockquote {
 .review-content {
   position: relative;
   height: 100%;
-  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.025);
+  box-shadow: 2px 2px 1px rgba(17, 110, 238, 0.05);
   border-radius: 2px;
-  border: 1px solid #dddddd;
+  border: 1px solid rgba(17, 110, 238, 0.2);
   background-color: #ffffff;
   padding: 1rem;
 
-  background: url(./images/quote-right-solid.svg) right top no-repeat;
+  background: #ffffff url(./images/quote-right-solid.svg) right top no-repeat;
   background-origin: content-box;
   background-size: 1.5rem 1.5rem;
 }
@@ -346,7 +356,7 @@ blockquote {
   height: 0;
   border: 10px solid transparent;
 
-  border-top-color: #dddddd;
+  border-top-color: rgba(17, 110, 238, 0.2);
   top: 100%;
   left: 2rem;
 }
