@@ -39,6 +39,10 @@ ul {
   list-style: none;
 }
 
+blockquote {
+  margin: 0;
+}
+
 .link,
 .link:visited {
   position: relative;
@@ -299,4 +303,67 @@ ul {
     transform: scale(0.95);
     box-shadow: 0 0 0 0 rgb(17, 110, 238, 0);
   }
+}
+
+.reviews {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.review {
+  padding: 0 0.75rem 1.5rem 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .review {
+    flex-basis: 50%;
+  }
+}
+
+@media (min-width: 960px) {
+  .review {
+    flex-basis: 33.333333333%;
+  }
+}
+
+.review-content {
+  position: relative;
+  height: 100%;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.025);
+  border-radius: 2px;
+  border: 1px solid #dddddd;
+  background-color: #ffffff;
+  padding: 1rem;
+
+  background: url(./images/quote-right-solid.svg) right top no-repeat;
+  background-origin: content-box;
+  background-size: 1.5rem 1.5rem;
+}
+
+.review-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+
+  border-top-color: #dddddd;
+  top: 100%;
+  left: 2rem;
+}
+
+.review-arrow::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 9px solid transparent;
+
+  border-top-color: #ffffff;
+  top: -10px;
+  left: -9px;
+}
+
+.review-author {
+  display: block;
+  font-weight: 500;
 }
