@@ -143,6 +143,11 @@ button {
   padding: 0 1rem;
 }
 
+.container--no-space {
+  margin: 0 auto;
+  padding: 0;
+}
+
 .column-left,
 .column-right {
   padding: 0 1rem;
@@ -158,6 +163,44 @@ button {
   .column {
     display: flex;
     justify-content: space-around;
+  }
+}
+
+.message {
+  overflow: hidden;
+  padding: 1.5rem;
+  border-bottom: 1px solid #ddb1b0;
+  background-color: #ffcccb;
+  color: #ba6b6c;
+  text-align: center;
+  font-size: 1.125rem;
+}
+
+.message > .container {
+  animation: messageAnim 1.5s ease-out;
+}
+
+.message > .container > img {
+  display: block;
+  margin: 0 auto 0.5rem auto;
+}
+
+@media (max-width: 839px) {
+  .message {
+    text-align: justify;
+  }
+}
+
+@keyframes messageAnim {
+  0% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0rem);
   }
 }
 
@@ -246,6 +289,12 @@ button {
 
 @media (min-width: 840px) {
   .visible-lg {
+    display: none;
+  }
+}
+
+@media (max-width: 839px) {
+  .visible-xl {
     display: none;
   }
 }
