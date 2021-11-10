@@ -135,6 +135,43 @@ button {
   color: #11ee92;
 }
 
+.appear {
+  animation: appearAnim 2s ease-out;
+}
+
+.reveal {
+  overflow: hidden;
+}
+
+.reveal__item {
+  display: block;
+  animation: revealAnim 2s ease-out;
+}
+
+@keyframes appearAnim {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes revealAnim {
+  0% {
+    transform: translateY(100%);
+  }
+  80% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
 .container {
   position: relative;
   z-index: 1;
